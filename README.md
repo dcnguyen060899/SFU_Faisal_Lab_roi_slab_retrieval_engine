@@ -4,3 +4,4 @@ SFU Faisal Lab specializes in AI-based medical image analysis software, focusing
 
 To enhance the efficiency of medical image analysis using the DAFS software, I developed an AI chatbot that converts a doctor's plain English requests into a JSON format containing region of interest (ROI) and slab details. This JSON is then parsed by DAFS to generate the analysis report, streamlining the process. This solution eliminates the need for doctors to memorize or constantly reference documentation, saving them valuable time that can be used to save lives.
 
+Feel free to explore the [AI Chatbot](https://vha-roi-slab-retrieval-engine.onrender.com) and try it out in action.
