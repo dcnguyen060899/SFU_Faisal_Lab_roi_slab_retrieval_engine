@@ -100,9 +100,9 @@ This chatbot eliminates the need for doctors to memorize complex ROI/SLAB combin
 
 ## Tech Stack
 
-- **LLM**: OpenAI GPT-4
+- **LLM**: Claude Sonnet 4.5 (Anthropic API)
 - **Framework**: [Chainlit](https://chainlit.io/) (Chat UI)
-- **Orchestration**: [LlamaIndex](https://www.llamaindex.ai/) (Agent framework)
+- **Architecture**: Modular Python application with direct API integration
 - **Deployment**: [Render](https://render.com/)
 
 ## Setup
@@ -115,32 +115,39 @@ This chatbot eliminates the need for doctors to memorize complex ROI/SLAB combin
 
 2. Install dependencies:
    ```bash
+   cd deployment
    pip install -r requirements.txt
    ```
 
 3. Set environment variables:
    ```bash
-   export OPENAI_API_KEY="your-api-key"
-   export OPENAI_API_MODEL="gpt-4"
+   export ANTHROPIC_API_KEY="your-api-key"
+   export ANTHROPIC_MODEL="claude-sonnet-4-5-20250929"
    ```
 
 4. Run the application:
    ```bash
-   chainlit run deployment/app/main.py
+   chainlit run app/main.py --host 0.0.0.0 --port 8000
    ```
 
 ## Project Structure
 
 ```
 ├── deployment/
-│   └── app/
-│       └── main.py          # Production deployment
-├── chainlit/
-│   ├── no_query_engine.py   # Simplified implementation
-│   └── with_engine_query.py # RAG-based implementation
+│   ├── app/
+│   │   ├── __init__.py      # Package initialization
+│   │   ├── main.py          # Chainlit UI and handlers
+│   │   ├── agent.py         # Claude AI agent wrapper
+│   │   ├── config.py        # Configuration management
+│   │   ├── models.py        # Pydantic data models
+│   │   └── prompts.py       # System prompts
+│   ├── requirements.txt     # Production dependencies
+│   ├── .env.example        # Environment variables template
+│   └── README.md           # Deployment documentation
+├── chainlit/               # Legacy implementations (archived)
 ├── src/
-│   └── run_demo.ipynb       # Jupyter notebook demo
-└── requirements.txt
+│   └── run_demo.ipynb     # Jupyter notebook demo
+└── README.md              # This file
 ```
 
 ## License
