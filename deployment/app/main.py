@@ -4,8 +4,8 @@ AI-powered chatbot for translating natural language medical imaging requests
 into structured JSON for DAFS (Data Analysis Facilitation Suite)
 """
 import chainlit as cl
-from .agent import ClaudeAgent
-from .config import config
+from app.agent import ClaudeAgent
+from app.config import config
 
 
 # Global agent instance (persists across sessions)

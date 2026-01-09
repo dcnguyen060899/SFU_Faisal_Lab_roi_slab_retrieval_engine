@@ -4,9 +4,9 @@ Claude AI Agent for ROI-SLAB retrieval
 import json
 from typing import List, Optional
 from anthropic import Anthropic
-from .config import config
-from .models import ConversationMessage
-from .prompts import get_system_prompt
+from app.config import config
+from app.models import ConversationMessage
+from app.prompts import get_system_prompt
 
 
 class ClaudeAgent:

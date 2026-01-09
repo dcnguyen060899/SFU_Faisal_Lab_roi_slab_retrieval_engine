@@ -47,6 +47,7 @@ export MAX_TOKENS="4096"
 ### 3. Run the Application
 
 ```bash
+cd deployment
 chainlit run app/main.py --host 0.0.0.0 --port 8000
 ```
 
@@ -109,7 +110,7 @@ pip install -r requirements.txt
 
 ### Start Command
 ```bash
-chainlit run app/main.py --host 0.0.0.0 --port 8000
+cd deployment && chainlit run app/main.py --host 0.0.0.0 --port 8000
 ```
 
 ## Development
@@ -128,7 +129,8 @@ chainlit run app/main.py --host 0.0.0.0 --port 8000
 # Set environment variables
 export ANTHROPIC_API_KEY="your_test_key"
 
-# Run the app
+# Run the app (from project root)
+cd deployment
 chainlit run app/main.py
 
 # Open browser to http://localhost:8000
