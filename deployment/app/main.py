@@ -3,6 +3,12 @@ ROI-SLAB Retrieval Engine - Main Application
 AI-powered chatbot for translating natural language medical imaging requests
 into structured JSON for DAFS (Data Analysis Facilitation Suite)
 """
+import sys
+import os
+
+# Add deployment directory to Python path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import chainlit as cl
 from app.agent import ClaudeAgent
 from app.config import config

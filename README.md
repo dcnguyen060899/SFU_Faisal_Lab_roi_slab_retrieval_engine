@@ -127,8 +127,7 @@ This chatbot eliminates the need for doctors to memorize complex ROI/SLAB combin
 
 4. Run the application:
    ```bash
-   cd deployment
-   chainlit run app/main.py --host 0.0.0.0 --port 8000
+   chainlit run deployment/app/main.py --host 0.0.0.0 --port 8000
    ```
 
 ## Project Structure

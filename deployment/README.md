@@ -47,8 +47,7 @@ export MAX_TOKENS="4096"
 ### 3. Run the Application
 
 ```bash
-cd deployment
-chainlit run app/main.py --host 0.0.0.0 --port 8000
+chainlit run deployment/app/main.py --host 0.0.0.0 --port 8000
 ```
 
 ## Configuration
@@ -110,8 +109,10 @@ pip install -r requirements.txt
 
 ### Start Command
 ```bash
-cd deployment && chainlit run app/main.py --host 0.0.0.0 --port 8000
+chainlit run deployment/app/main.py --host 0.0.0.0 --port 8000
 ```
+
+**Note**: The code automatically adds the deployment directory to Python's module path, so no `cd` is needed.
 
 ## Development
 
@@ -129,9 +130,8 @@ cd deployment && chainlit run app/main.py --host 0.0.0.0 --port 8000
 # Set environment variables
 export ANTHROPIC_API_KEY="your_test_key"
 
-# Run the app (from project root)
-cd deployment
-chainlit run app/main.py
+# Run the app from project root
+chainlit run deployment/app/main.py
 
 # Open browser to http://localhost:8000
 ```
