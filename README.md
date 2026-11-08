@@ -1,6 +1,6 @@
 # ROI-SLAB Retrieval Engine
 
-**[Live Demo](https://vha-roi-slab-retrieval-engine.onrender.com)**
+**Demo:** the Render deployment is currently offline; the code below runs locally.
 
 An AI-powered chatbot that converts plain English medical imaging requests into structured JSON for the Data Analysis Facilitation Suite (DAFS).
 
